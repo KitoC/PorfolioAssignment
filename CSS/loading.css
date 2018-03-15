@@ -1,0 +1,176 @@
+/* GLOBAL STYLES */
+body {
+  background: black;
+  padding-top: 5em;
+  display: flex;
+  /* justify-content: center; */
+}
+.grid
+{
+  display: grid;
+  grid-template-rows: 20px 20px;
+  margin: 0 auto;
+  margin-left: 60px;
+  width: 75%;
+  vertical-align: top;
+}
+.binarylast
+{
+  margin-left: 50px;
+  width: 110%;
+}
+h2
+{
+  display: inline-block;
+  color: #fff;
+  font-family: monospace;
+  white-space: nowrap; /* Keeps the content on a single line */
+  float: left;
+
+  /* animation-fill-mode: forwards; */
+}
+
+/* DEMO-SPECIFIC STYLES */
+.b
+{
+  color: orange;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  margin-right: 0 auto;
+  margin-left: 0 0; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+  typing 0.5s steps(30, end),
+  blink-caret .5s step-end infinite;
+  animation-fill-mode: forwards;
+}
+.name
+{
+  animation: name 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.i
+{
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+.t
+{
+  animation-delay: 1s;
+  opacity: 0;
+}
+.o
+{
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+
+.c
+{
+  animation-delay: 2s;
+  opacity: 0;
+}
+.l
+{
+  animation-delay: 2.5s;
+  opacity: 0;
+}
+.a
+{
+  animation-delay: 3s;
+  opacity: 0;
+}
+.r
+{
+  animation-delay: 3.5s;
+  opacity: 0;
+}
+.K
+{
+  animation-delay: 4s;
+  opacity: 0;
+}
+/* The typing effect */
+@keyframes name {
+  0% {opacity: 0;
+  width: 0px}
+  99% {opacity:0;
+  width: 0px}
+  100% {opacity: 1;
+  width: 12px;
+  }
+}
+@keyframes color {
+  0% {color: orange;}
+  100% {color: white;}
+}
+
+@keyframes typing {
+  0% { width: 0px;
+  opacity: 1 }
+  50% { width: 110px }
+  99% { opacity: 1 }
+  100% { width: 0px;
+  overflow: hidden;
+  opacity: 0;}
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+
+main
+{
+  display: block;
+}
+
+.Iam {
+  margin-top: 20px;
+  margin-left: 50px;
+  padding: 2em auto;
+  font: normal 20px/30px Montserrat, sans-serif;
+  color: #999;
+  line-height: 50px;
+}
+.Iam p {
+  height: 50px;
+  float: left;
+  margin-right: 0.3em;
+}
+.Iam b {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+  top: 40px;
+}
+.Iam .innerIam {
+  display: inline-block;
+  color: #e74c3c;
+  position: relative;
+  white-space: nowrap;
+  top: -50px;
+  left: 0;
+  opacity: 0;
+  animation: move 9s;
+  animation-delay:4s;
+  animation-fill-mode: forwards;
+
+}
+@keyframes move{
+5%  { top: 0px;
+      opacity: 0;}
+20% { top: 0px;
+      opacity: 1; }
+40% { top: -50px; }
+60% { top: -100px; }
+80% { top: -150px;
+      opacity: 1; }
+100% { top: -200px;
+      opacity: 1; }
+}

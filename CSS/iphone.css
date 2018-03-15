@@ -1,0 +1,332 @@
+body
+{
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
+.center
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.45);
+
+}
+.mobile
+{
+  width: 276px;
+  height: 580px;
+  background: #fff;
+  border-radius: 30px;
+  border: 2px solid rgba(0,0,0,.3);
+  box-sizing: border-box;
+  box-shadow: inset 0 0 8px rgba(0,0,0,.3);
+}
+.screen
+{
+  position: relative;
+  background: black;
+  width: 256px;
+  height:455px;
+  margin: 58px auto;
+  overflow: hidden;
+}
+
+.screen:before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, .1);
+  width: 100%;
+  height: 100%;
+  transform: skewX(-5deg) translateX(-50%);
+}
+.screen.active
+{
+  background-color: #83b0ab;
+  background-size: cover;
+}
+.button
+{
+  opacity: 0;
+}
+.img
+{
+  opacity: 0;
+
+}
+.txt
+{
+  opacity: 0;
+
+}
+.button
+{
+  opacity: 1;
+  background-size: cover;
+  grid-template-rows:  3.5em 3.5em 3.5em 3.5em;
+  grid-template-columns: 3.5em 3.5em 3.5em 3.5em;
+  display: grid;
+  justify-content: space-around;
+  margin: 0px opx;
+  margin-right: 6px;
+  height: 3.5em;
+
+}
+div.btext
+{
+  font-size: 0.7em;
+  display: grid;
+  grid-template-columns: 3.5em 3.5em 3.5em 3.5em;
+  grid-template-rows:  1.5em;
+  justify-content: space-around;
+  margin-top: 0px;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+div.btext p
+{
+  margin:0px;
+}
+a img.img.active
+{
+  opacity: 1;
+  width: 100%;
+}
+.txt.active
+{
+  text-align: center;
+  opacity: 1;
+}
+.button.active a
+{
+  background-color: red;
+  border-radius: 5px;
+  margin: 8px;
+  margin-bottom: 0px;
+  /* padding: 1px; */
+  width: 3em;
+  height: 3em;
+}
+.button.active a:first-child {
+  background-color: black;
+  /* padding: 30px; */
+
+}
+.button.active a:nth-child(2) {
+  background-color: #7f4f27;
+
+}
+.button.active a:nth-child(3) {
+  background-color: white;
+
+}
+.button.active a:nth-child(4) {
+  background-color: #31518e;
+}
+.button.active a:nth-child(5) {
+  background-color: #83b0ab;
+
+}
+.button.active a:nth-child(6) {
+  background-color: #7f4f27;
+}
+
+
+
+.home
+{
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  box-shadow: inset 0 0 7px rgba(0,0,0,.1);
+  border-radius: 50%;
+  border: 2px solid #cecece;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.inner
+{
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 4px;
+  background: #262626;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+.inner:before
+{
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -22px;
+  background: #262626;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.inner:after
+{
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  background: #262626;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+.volume
+{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 90px;
+  left: -2px;
+}
+.volume li
+{
+  list-style: none;
+  width: 2px;
+  height: 30px;
+  background: #ccc;
+  margin: 10px 0px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.silent
+{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50px;
+  left: -2px;
+}
+.silent li
+{
+  list-style: none;
+  width: 2px;
+  height: 20px;
+  background: #ccc;
+  margin: 10px 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.sleep
+{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 90px;
+  right: -2px;
+}
+.sleep li
+{
+  list-style: none;
+  width: 2px;
+  height: 30px;
+  background: #ccc;
+  margin: 10px 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+@media screen and (max-width: 600px) {
+  body
+  {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+  }
+  .center
+  {
+    top: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    left:0;
+    transform: translate(0, 0) scale(1);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    }
+  .screen
+  {
+    opacity: 1;
+    background: #262626;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+  }
+  .mobile
+  {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  .home
+  {
+    width: 0;
+    height: 0;
+    margin: 0;
+    border: 0;
+    opacity: 0;
+    transform: translateX(0);
+  }
+  .inner
+  {
+    width: 0;
+    height: 0;
+    margin: 0;
+    border: 0;
+    opacity: 0;
+    transform: translateX(0);
+    }
+    .volume
+    {
+      left: 0;
+      width: 0;
+      height: 0;
+      margin: 0;
+      border: 0;
+      opacity: 0;
+    }
+    .silent
+    {
+      left: 0;
+      width: 0;
+      height: 0;
+      margin: 0;
+      border: 0;
+      opacity: 0;
+    }
+    .sleep
+    {
+      left: 0;
+      width: 0;
+      height: 0;
+      margin: 0;
+      border: 0;
+      opacity: 0;
+    }
+}

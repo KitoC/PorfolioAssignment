@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="CSS/iphone.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        showLoading = true;
+        function loading() {
+          if (showLoading) {
+            $('iframe').attr('src', 'loading.html');
+            setTimeout(function() {
+              $('iframe').attr('src', 'screen.html');
+            }, 15000);
+          } else {
+            $('iframe').attr('src', 'screen.html');
+          }
+          showLoading = false;
+        }
+    </script>
+
+  </head>
+  <body>
+    <div class="center">
+       <div class="mobile">
+         <div class="screen">
+           <iframe src="blank.html" style="border:none;" height="100%" width="100%" scrolling="no" name="iframe_a"></iframe>
+
+         </div>
+         <div onclick="loading()" class="home"></div>
+         <div class="inner"></div>
+         <ul class="volume">
+           <li></li>
+           <li></li>
+         </ul>
+         <ul class="silent">
+           <li></li>
+         </ul>
+         <ul class="sleep">
+           <li></li>
+         </ul>
+        </div>
+  </div>
+
+  <script>
+  if ($(document).width() <= 600) {
+    setTimeout(function() {
+      $('iframe').attr('src', 'loading.html');
+    }, 0);
+    setTimeout(function() {
+      $('iframe').attr('src', 'screen.html');
+    }, 16000);
+  }
+  </script>
+
+  </body>
+</html>
