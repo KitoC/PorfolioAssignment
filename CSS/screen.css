@@ -1,22 +1,28 @@
 
-
+iframe
+{
+  position: relative;
+  z-index: 100;
+}
 
 body.center
 {
   margin: 0px;
-  background-image: url("images/unnamed.jpg");
+  /* background-image: url("images/unnamed.jpg"); */
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
   text-align: center;
   font-family: "Helvetica";
   color: white;
 }
-
+nav
+{
+  z-index: 2;
+}
 .headGrid
 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* margin-top: 3px; */
 }
 
 
@@ -46,7 +52,6 @@ div.battery
 img.battery
 {
   height: 100%;
-  /* width: 100%; */
   margin-right: 2px;
 }
 .battery p
@@ -69,11 +74,6 @@ img.battery
   overflow: hidden;
 }
 
-/* .screen.active
-{
-  background-color: #83b0ab;
-  background-size: cover;
-} */
 
 .button
 {
@@ -105,7 +105,8 @@ div.btext p
 a img.img
 {
   opacity: 1;
-  width: 100%;
+  width: 2.4em;
+  margin-top
 }
 .txt
 {
@@ -114,48 +115,126 @@ a img.img
 }
 .button a
 {
-  background-color: red;
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 8px;
   margin-bottom: 0px;
-  /* padding: 1px; */
-  width: 3em;
-  height: 3em;
-}
-.button a:first-child {
-  background-color: black;
-  /* padding: 30px; */
+  /* padding-top: 0.5em; */
+  width: 3.1em;
+  height: 3.1em;
 
 }
-.button a:nth-child(2) {
-  background-color: #7f4f27;
+.fb
+{
+  padding-top: 0.70em;
+  padding-left: 0.70em;
+}
+.img.notes
+{
+  width: 116%;
+  height: 116%;
+  margin-top: -4px;
+  margin-left: -4px;
 
 }
-.button a:nth-child(3) {
-  background-color: white;
-
+.icon
+{
+  padding: 5.5px;
 }
-.button a:nth-child(4) {
-  background-color: #31518e;
+.iconSVG
+{
+  padding-top: 0.25em;
 }
-.button a:nth-child(5) {
-  background-color: #83b0ab;
-
+.one
+{
+  background: black;
+  color: white;
+  z-index: 4;
 }
-.button a:nth-child(6) {
-  background-color: #7f4f27;
+.two
+{
+  background: black;
+  color: white;
+  z-index: 4;
+}
+.three
+{
+  background: white;
+  color: white;
+  z-index: 4;
+}
+.four
+{
+  background: #31518c;
+  color: white;
+  z-index: 4;
+}
+.five
+{
+  background: rgb(51, 51, 51);
+  color: white;
+  z-index: 4;
+}
+.six
+{
+  background: black;
+  color: white;
+  z-index: 4;
 }
 
 
-/* @media screen and (max-width:600px) {
-  #container
-  {
-    margin: 0;
-    padding: 0;
-    background: #a2d49f;
-    width: 100vw;
-  }
-} */
+#bottom-bar
+{
+  position: fixed;
+  bottom: 1%;
+  height: 4em;
+  width: 100%;
+  display: block;
+}
+#bottom-bar-blur
+{
+  display: block;
+
+  position: fixed;
+  bottom: 0%;
+  height: 4.5em;
+  width: 100%;
+  overflow:   hidden;
+}
+#bottom-bar-blur.blurred
+{
+  filter: blur(8px) brightness(300%);
+  position: absolute;
+  height: 455px;
+  width: 100%;
+  bottom: 0%;
+  left: 0%;
+  z-index: 1;
+}
+
+.lportfolio
+{
+  background: rgb(51, 51, 51);
+  color: rgb(255, 255, 179);
+  z-index: 4;
+}
+.labout
+{
+  background: #26cf42;
+  color: white;
+  z-index: 4;
+}
+.lcontact
+{
+  background: #26cf42;
+  color: white;
+  z-index: 4;
+}
+.lresume
+{
+  background: #26cf42;
+  color: white;
+  z-index: 4;
+}
 
 
 
@@ -168,11 +247,11 @@ a img.img
                     4px 0 #c9c9c9,
                     5px 0 #c9c9c9,
                     6px 0 #c9c9c9,
-                     7px 0 #bbb,
-                     8px 0 #bbb,
-                     9px 0 #bbb,
-                     10px 0 #b9b9b9,
-                     11px 0 #b9b9b9,
+                    7px 0 #bbb,
+                    8px 0 #bbb,
+                    9px 0 #bbb,
+                    10px 0 #b9b9b9,
+                   11px 0 #b9b9b9,
                     12px 0 #b9b9b9,
 
 
@@ -195,11 +274,11 @@ a img.img
                           -4px 0 #c9c9c9,
                           -5px 0 #c9c9c9,
                           -6px 0 #c9c9c9,
-                           -7px 0 #bbb,
-                           -8px 0 #bbb,
-                           -9px 0 #bbb,
-                           -10px 0 #b9b9b9,
-                           -11px 0 #b9b9b9,
+                          -7px 0 #bbb,
+                          -8px 0 #bbb,
+                          -9px 0 #bbb,
+                          -10px 0 #b9b9b9,
+                          -11px 0 #b9b9b9,
                           -12px 0 #b9b9b9,
 
 
@@ -212,6 +291,7 @@ a img.img
                          0 20px 20px rgba(0,0,0,.15);
          }
 }
+
 body
 {
   background-color: black;

@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>CSS</title>
     <meta name="viewport" content="width=device-width" />
+    <title>CSS</title>
     <link rel="stylesheet" type="text/css" href="CSS/iphone.css"/>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script>
@@ -18,7 +18,21 @@
             $('iframe').attr('src', 'screen.html');
           }
           showLoading = false;
-        }
+         }
+           // portrait = true
+           // landscape = false
+           function landscape() {
+            $('.center').addClass('landscapeC');
+            $('.screen').addClass('landscapeS');
+            // landscape = true
+            // portrait = false
+         }
+         function portrait() {
+          $('.center').addClass('portraitC');
+          $('.screen').addClass('portraitS');
+          // landscape = false
+          // portrait = true
+       }
     </script>
 
   </head>
@@ -37,6 +51,12 @@
          </ul>
          <ul class="silent">
            <li></li>
+         </ul>
+         <ul class="tag">
+           <li><button class"landscapeB" onclick="landscape()">Go Landscape</button>
+           </li>
+           <li><button class"portraitB" onclick="portrait()">Go Portrait</button>
+           </l>
          </ul>
          <ul class="sleep">
            <li></li>

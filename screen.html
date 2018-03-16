@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>CSS</title>
     <link rel="stylesheet" type="text/css" href="CSS/screen.css"/>
-    <!-- <base target="_parent"> -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
     <script>
         function startTime() {
             var today = new Date();
@@ -17,49 +17,69 @@
             document.getElementById('time').innerHTML =
             h + ":" + m;
             var t = setTimeout(startTime, 500);
-        }
+          }
         function checkTime(i) {
             if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
             return i;
-        }
-
-
-</script>
+          }
+      </script>
   </head>
   <body class="center" onload="startTime()">
 
-        <div id="container">
-           <div class="headGrid">
+    <div id="container">
+       <div class="headGrid">
            <div class="cell"></div>
            <div id="time" class="time"></div>
            <div class="battery"><p>100%</p><img class="battery"  src="CSS/images/battery.png"></div>
-           </div>
-           <nav class="button">
+       </div>
 
-             <a><img class="img" src="CSS/images/homeicon.png"></a>
+       <nav class="button">
 
-             <a><img class="img"  src="CSS/images/about.png"></a>
+         <a class="one"></a>
 
-             <a><img class="img" src="CSS/images/gallery.png"></a>
+         <a class="two"></a>
 
-             <a  href="http://www.facebook.com" target="_blank"><img class="img" src="CSS/images/facebook.png"></a>
-           </nav>
-           <div class="btext">
-                   <p class="txt">Home</p>
-                 <p class="txt">About</p>
-               <p class="txt">Gallery</p>
-             <p class="txt">Facebook</p>
-           </div>
-           <nav class="button">
-             <a><img class="img" src="CSS/images/github.png"></a>
-             <a><img class="img" src="CSS/images/phone.png"></a>
-           </nav>
-           <div class="btext">
-                   <p class="txt">GitHub</p>
-                 <p class="txt">Facebook</p>
-           </div>
+         <a class="three"><img class="img icon" src="CSS/images/gallery.png"></a>
 
-      </div>
+         <a class="four"  href="http://www.facebook.com" target="_blank"><img class="img fb" src="CSS/images/facebook.png"></a>
+
+       </nav>
+
+       <div class="btext">
+         <p class="txt">Home</p>
+         <p class="txt">About</p>
+         <p class="txt">Gallery</p>
+         <p class="txt">Facebook</p>
+       </div>
+
+       <nav class="button">
+         <a class="five"  href="http://www.facebook.com" target="_blank"><img class="img icon"  src="CSS/images/github.png"></a>
+         <a class="six" class="lportfolio"></a>
+       </nav>
+
+       <div class="btext">
+         <p class="txt">GitHub</p>
+         <p class="txt">Portfolio</p>
+       </div>
+
+    </div>
+
+
+  <div id="bottom-bar-blur">
+    <nav class="button">
+
+      <a class="lcontact"><i class="fas fa-phone fa-2x iconSVG" data-fa-transform="flip-h"></i></a>
+      
+      <a class="lresume"><i class="fas fa-envelope fa-2x iconSVG"></i></a>
+
+      <a class="labout" href="portfolio.html"><img class="img notes" src="CSS/images/inote.png"></a>
+
+
+      <a class="lportfolio" href="portfolio.html" ><i class="fas fa-folder fa-2x iconSVG"></i></a>
+
+
+    </nav>
+      <!-- <img class="blurred" src="CSS/images/unnamed.jpg"> -->
     </div>
 
   </body>
