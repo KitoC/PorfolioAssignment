@@ -32,7 +32,7 @@
              orient = true;
              $(document).ready(function(){
                $(".tag").click(function(){
-                 if (orient) {
+                 if ((orient)||(!$('iframe').attr('src').match('screen.html'))) {
                    $('.center').addClass('landscapeC');
                    $('.screen').addClass('landscapeS');
                    $('.center').removeClass('portraitC');
