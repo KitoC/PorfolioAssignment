@@ -19,20 +19,33 @@
           }
           showLoading = false;
          }
-           // portrait = true
-           // landscape = false
-           function landscape() {
-            $('.center').addClass('landscapeC');
-            $('.screen').addClass('landscapeS');
-            // landscape = true
-            // portrait = false
-         }
-         function portrait() {
+
+         //   function landscape() {
+            // $('.center').addClass('landscapeC');
+            // $('.screen').addClass('landscapeS');
+         //
+         // }
+         // function portrait() {
           $('.center').addClass('portraitC');
           $('.screen').addClass('portraitS');
-          // landscape = false
-          // portrait = true
-       }
+         // }
+             orient = true;
+             $(document).ready(function(){
+               $(".tag").click(function(){
+                 if (orient) {
+                   $('.center').addClass('landscapeC');
+                   $('.screen').addClass('landscapeS');
+                   $('.center').removeClass('portraitC');
+                   $('.screen').removeClass('portraitS');
+                   orient = false }
+                else {
+                  $('.center').removeClass('landscapeC');
+                  $('.screen').removeClass('landscapeS');
+                  $('.center').addClass('portraitC');
+                  $('.screen').addClass('portraitS');
+                   orient = true}
+               })
+             })
     </script>
 
   </head>
@@ -52,12 +65,7 @@
          <ul class="silent">
            <li></li>
          </ul>
-         <ul class="tag">
-           <li><button class"landscapeB" onclick="landscape()">Go Landscape</button>
-           </li>
-           <li><button class"portraitB" onclick="portrait()">Go Portrait</button>
-           </l>
-         </ul>
+         <div class="tag">Rotate</div>
          <ul class="sleep">
            <li></li>
          </ul>

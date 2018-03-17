@@ -9,7 +9,7 @@ iframe
   position: relative;
   z-index: 100;
 }
-.landscapeC
+.center.landscapeC
 {
   animation: landscape 3s;
   animation-fill-mode: forwards;
@@ -29,7 +29,6 @@ iframe
 }
 .mobile
 {
-
   width: 276px;
   height: 580px;
   background: #fff;
@@ -276,30 +275,14 @@ a img.img.active
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 150px;
-  right: -65px;
-}
-
-.tag button
-{
-  /* background: rgba(255, 0, 0, 0); */
-  width: 80px;
-  height: 50px;
-  border: none;
-  margin-top: 15px;
-  padding-left: 12px;
-  font-weight: bolder;
-  font-size: 0.7em;
+  top: 250px;
+  right: -40px;
+  background: yellow;
   transform: rotate(90deg);
-  opacity: 1;
-  border-radius:  10px 10px 0 0;
+  font-weight: bolder;
+  padding: 2px;
+  border-radius: 5px;
 }
-.tag.portrait
-{
-  opacity: 0;
-  z-index: 100;
-}
-
 
 @media screen and (max-width: 600px) {
   body
@@ -342,6 +325,7 @@ a img.img.active
     padding: 0;
     margin: 0;
     border: 0;
+    border-radius: 0px;
   }
   .home
   {
@@ -387,6 +371,24 @@ a img.img.active
       margin: 0;
       border: 0;
       opacity: 0;
+    }
+    .tag
+    {
+      margin: 0;
+      padding: 0;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      position: relative;
+      z-index: -1;
+      /* position: absolute;
+      top: 250px;
+      right: -40px;
+      background: yellow;
+      transform: rotate(90deg);
+      font-weight: bolder;
+      padding: 2px;
+      border-radius: 5px; */
     }
 }
 
