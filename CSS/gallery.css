@@ -10,21 +10,33 @@ body
   text-align: center;
   font-family: "Helvetica";
   color: white;
+  height: 100%;
 }
 main
 {
+  height: 100%;
+}
+.topbox
+{
+  background-color: #f9f9f9;
+  height:auto;
+  top:0;
+  position:fixed;
+  z-index: 100;
   width: 100%;
-
+  display: grid;
+  grid-template-rows: 1rem 2rem;
+  margin-bottom: 0vw;
 }
 .headGrid
 {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
-  background-color: lightgrey;
   color: black;
   margin-bottom: -10px;
+  margin-top: 0;
   width: 100%;
-
+  height: 100%;
 }
 
 
@@ -39,7 +51,9 @@ div.time
 {
   grid-column: 5 / 6;
   height: 16px;
-
+  font-size: 10px;
+  font-weight: bolder;
+  margin-top: 3px;
 }
 .percent
 {
@@ -50,53 +64,95 @@ div.time
 {
   text-align: right;
   margin: 0;
+  margin-top: 3px;
+
   /* margin-right: -12px; */
   height: 100%;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .battery
 {
   height: 16px;
   grid-column: 9/10;
-  margin-right: 2px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  /* margin-right: 2px; */
 }
-.battery img
+
+.bb
 {
-  height: 100%;
+  padding: 2px;
+  margin-top: 2px;
+  margin-left: 2px;
+  margin-right: 0;
+  height: 6px;
+  width: 20px;
+  border-radius: 3px;
+  border: 1px solid #908d8c;
+  position: relative;
+  z-index: 10;
+}
+.bb::after
+{
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: black;
+  border-radius: 1px;
+  z-index: -1;
+  top: 1px;
+  bottom: 1px;
+  right: 1px;
+  left: 1px;
+}
+.be
+{
+  width: 1.5px;
+  height: 4px;
+  background-color: #908d8c;
+  margin-top: 6px;
+  margin-left: 0;
+  margin-right: 4px;
+  display: inline-block;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  columns: 2/3;
 }
 
 
 .topicons
 {
-  height: 25px;
-  color: blue;
-  background-color: lightgrey;
+
+  height: 16vw;
+  color: #449dfd;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  /* margin-bottom: 10px; */
+  grid-template-columns: repeat(4, 1fr);
+  height: auto;
+  background-color: #f9f9f9;
+  border-bottom: 0.5px solid grey;
 }
-.icon1
+.topicons div
 {
-  height: 25px;
-  grid-column: 1/2;
+  margin: 0px;
+  height: auto;
 }
-.icon2
+.topicons p
 {
-  height: 25px;
-  grid-column: 7/8;
-  margin-top: 17PX;
+  margin: 0px;
 }
 
-.icon3
+.topicons p.a
 {
-  height: 25px;
-  grid-column: 8/9;
+  text-align: right;
+  padding-left: 20vw;
 }
-.icon1 p
+
+.s
 {
-  margin-top: 10px;
-  font-size: 25px;
+  text-align: right;
+  position: absolute;
+  right: 15vw;
 }
 
 .albums
@@ -104,43 +160,113 @@ div.time
   display: grid;
   grid-template-columns: 50% 50%;
   justify-items: center;
-  grid-gap: 5px;
   color: black;
   width: 100%;
+  overflow: scroll;
+  margin-top: 3.2rem;
+  margin-bottom: 3.2rem;
+
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
 
-.album1
+.album div
 {
-  width: 7em;
-  height: 7em;
+  background-color: #f0f0f0;
+  width: 6rem;
+  height: 6rem;
+  margin: 1vw;
+  position: relative;
+  z-index: 10;
+  border-radius: 5px;
+  overflow: hidden;
 }
-.album1 div
+.album h4
 {
-  background-color: lightgrey;
-  width: 100%;
-  height: 100%;
-}
-.album2 div
-{
-  background-color: lightgrey;
-  width: 7em;
-  height: 7em;
-}
-.hidden div
-{
-  background-color: lightgrey;
-  width: 7em;
-  height: 7em;
-}
-
-h2
-{
-  margin-top: 0px;
-  background-color: lightgrey;
-  color: black;
   text-align: left;
-  padding-top: 25px;
-  padding-left: 10px;
-  padding-bottom: 5px;
-  border-bottom: 0.5px solid grey;
+  margin-left: 1.5vw;
+  margin-top: 2vw;
+  margin-bottom: 1.5vw;
+  font-weight: normal;
+  font-size: 0.8em;
+}
+.album p
+{
+  text-align: left;
+  margin-left: 1.5vw;
+  margin-top: 0;
+  color: #909095;
+  font-size: 0.8em;
+
+}
+.album img
+{
+  justify-items: center;
+  height: 100%;
+  border: 0;
+}
+
+.h div
+{
+  justify-items: center;
+  width: 4rem;
+  height: 4rem;
+  margin-left: 1rem;
+  top: 0.8rem;
+  background-color: #cccccc;
+  border-radius: 50vw;
+}
+.h img
+{
+  justify-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 0.8rem;
+}
+
+.bottombar
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 2.2rem;
+  bottom: 0;
+  width: 100%;
+  background-color: #f4f4f4;
+  position:fixed;
+  z-index: 100;
+  border-top: 0.5px solid grey;
+}
+.icons img, .iconsa img
+{
+  width: 1.1rem;
+  margin-bottom: 0;
+  margin-top: 0.2rem;
+
+}
+.icons p
+{
+  margin-top: 0;
+  color: #a1a1a1;
+  font-size: 0.6rem;
+}
+.iconsa p
+{
+  margin-top: 0;
+  color: #007aff;
+  font-size: 0.6rem;
+
+}
+
+
+@media screen and (min-width: 300px)
+{
+  .albums
+  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+
 }
