@@ -2,10 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>CSS</title>
+    <title>Main Menu</title>
     <link rel="stylesheet" type="text/css" href="CSS/screen.css"/>
+
+<!-- This script is for the SVG icons form fontawesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+
+<!-- This is the javascript for the live time function -->
     <script>
         function startTime() {
             var today = new Date();
@@ -24,62 +28,73 @@
           }
       </script>
   </head>
-  <body class="center" onload="startTime()">
 
+<!-- The startTime() is the javascript initializer for the live time -->
+  <body onload="startTime()">
+
+<!-- Thie section is for the time and battery at the top -->
     <div class="headGrid">
         <div class="cell"></div>
         <div id="time" class="time"></div>
         <div class="percent"><p>100%</p></div>
         <div class="battery"><div class="bb"></div><div class="be"></div></div>
     </div>
-
+<!-- These are the icons/links for my gallery, linkedin, github and facebbok -->
        <nav class="button">
 
-         <a class="three" href="gallery.html"><img class="img icon" src="CSS/images/gallery.png"></a>
+         <a class="three" href="gallery.html"><img class="img icon" src="CSS/images/gallery.png" alt="Colorful flower icon for galler"></a>
 
-         <a class="two"><img class="img icon" src="CSS/images/linkedin.png"></a>
+         <a class="two" href="https://www.linkedin.com/in/kito-clark-793029157"  target="_blank"><img class="img icon" src="CSS/images/linkedin.png" alt="Icon for linkedin - in"></a>
 
-         <a class="one"  href="https://github.com/KitoC" target="_blank"><img class="img icon"  src="CSS/images/github.png"></a>
+         <a class="one"  href="https://github.com/KitoC" target="_blank"><img class="img icon"  src="CSS/images/github.png" alt="Icon for github - cat silhouette with octopus arm as a tail"></a>
 
-         <a class="four"  href="http://www.facebook.com" target="_blank"><img class="img fb" src="CSS/images/facebook.png"></a>
+         <a class="four"  href="http://www.facebook.com" target="_blank"><img class="img fb" src="CSS/images/facebook.png" alt="Icon for facebook - f"></a>
 
        </nav>
-
+<!-- This is the text underneath the icon links -->
        <div class="btext">
-         <p class="txt">Home</p>
-         <p class="txt">About</p>
          <p class="txt">Gallery</p>
+         <p class="txt">LinkedIn</p>
+         <p class="txt">Github</p>
          <p class="txt">Facebook</p>
        </div>
-
+<!-- This is ready to be filled with more icons/links -->
        <nav class="button">
-
-         <!-- <a class="six" class="lportfolio"></a> -->
        </nav>
 
        <div class="btext">
-         <!-- <p class="txt">GitHub</p>
-         <p class="txt">Portfolio</p> -->
        </div>
 
     </div>
+<!-- This is for my logo -->
+    <div class="logo"><img src="CSS/images/kcglobe2.png" alt="logo for kito clark - initials KC in a wireframe globe"></div>
 
-
+<!-- this is to give the bottom bar a slightly blurred look  -->
   <div id="bottom-bar-blur">
+<!-- This is the main menu section down the bottom -->
     <nav class="button">
 
       <a class="lcontact" href="contact.html"><i class="fas fa-phone fa-2x iconSVG" data-fa-transform="flip-h"></i></a>
 
       <a class="lresume"><i class="fas fa-envelope fa-2x iconSVG"></i></a>
 
-      <a class="labout" href="portfolio.html"><img class="img notes" src="CSS/images/inote.png"></a>
+      <a class="labout" href="portfolio.html"><img class="img notes" src="CSS/images/inote.png" alt="Icon for iphone notes - notepad"></a>
 
 
       <a class="lportfolio" href="portfolio.html" ><i class="fas fa-folder fa-2x iconSVG"></i></a>
 
 
     </nav>
-      <img class="blurred" src="">
+    <!-- This is the text underneath the icon links -->
+    <div class="btext">
+      <p class="txt">Contact</p>
+      <p class="txt">Email</p>
+      <p class="txt">About</p>
+      <p class="txt">Portfolio</p>
+    </div>
+    <!-- This is how I blurred the bottom bar -->
+
+      <img class="blurred" src="CSS/images/stars2.jpg">
     </div>
 
   </body>

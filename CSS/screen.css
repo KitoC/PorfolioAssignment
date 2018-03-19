@@ -1,24 +1,18 @@
 
-iframe
-{
-  position: relative;
-  z-index: 100;
-}
 
-body.center
+
+body
 {
   margin: 0px;
-  /* background-image: url("images/unnamed.jpg"); */
-  background-repeat: no-repeat;
-  background-size: auto;
-  text-align: center;
   font-family: "Helvetica";
   color: white;
+  background: white;
+  overflow: hidden;
+  background-image: url(images/stars2.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
-nav
-{
-  z-index: 2;
-}
+/* This is for the time and battery at the top */
 .headGrid
 {
   display: grid;
@@ -109,23 +103,9 @@ div.time
   border-bottom-right-radius: 5px;
   columns: 2/3;
 }
-.center
-{
-  /* position: relative; */
-  background: #83b0ab;
-  /* width: 256px;
-  height:455px; */
-  /* margin: 58px auto; */
-  overflow: hidden;
-}
-.blank
-{
-  position: relative;
-  background: #262626;
-  overflow: hidden;
-}
 
 
+/* This is the styling for the navbar buttons (the icon/links) */
 .button
 {
   background-size: cover;
@@ -138,6 +118,7 @@ div.time
   height: 3.5em;
 
 }
+/* This is the styling for the text underneath the icon/links */
 div.btext
 {
   font-size: 0.7em;
@@ -148,32 +129,37 @@ div.btext
   margin-top: 0px;
   margin-right: 3px;
   margin-left: 3px;
+  align-items: center;
+
 }
 div.btext p
 {
   margin:0px;
 }
+.txt
+{
+  text-align: center;
+  opacity: 1;
+  z-index: 100;
+}
+/* This is for the image sizes of the logos in the buttons  */
 a img.img
 {
   opacity: 1;
   width: 2.4em;
   margin-top
 }
-.txt
-{
-  text-align: center;
-  opacity: 1;
-}
+/* This is the styling for all the buttons */
 .button a
 {
   border-radius: 10px;
   margin: 8px;
   margin-bottom: 0px;
-  /* padding-top: 0.5em; */
   width: 3.1em;
   height: 3.1em;
 
 }
+/*  Styling for special button/icons (facebook/notes)*/
 .fb
 {
   padding-top: 0.70em;
@@ -187,6 +173,7 @@ a img.img
   margin-left: -4px;
 
 }
+/* THis centers the images in the buttons */
 .icon
 {
   padding: 5.5px;
@@ -194,58 +181,64 @@ a img.img
 .iconSVG
 {
   padding-top: 0.25em;
+  padding-left: 0.25em;
 }
+/* Coloring for indivdual buttons */
 .one
 {
   background: rgb(51, 51, 51);
   color: white;
-  z-index: 4;
 }
 .two
 {
   background: #0077b5;
   color: white;
-  z-index: 4;
 }
 .three
 {
   background: white;
   color: white;
-  z-index: 4;
 }
 .four
 {
   background: #31518c;
   color: white;
-  z-index: 4;
 }
 
-
-
-#bottom-bar
+/* This is the styling for the LOGO */
+.logo
 {
-  position: fixed;
-  bottom: 1%;
-  height: 4em;
-  width: 100%;
-  display: block;
+  text-align: center;
+  height: 200px;
 }
+.logo img
+{
+  width: 10rem;
+  height: 10rem;
+  margin-top: 0rem;
+  margin-left: 0rem;
+  border: none;
+  text-align: center;
+  grid-column: 2/3;
+
+}
+
+/* Bottom menu and blur effects */
 #bottom-bar-blur
 {
   display: block;
-
   position: fixed;
   bottom: 0%;
   height: 4.5em;
   width: 100%;
   overflow:   hidden;
 }
-#bottom-bar-blur.blurred
+.blurred
 {
-  filter: blur(8px) brightness(300%);
+  filter: blur(8px) brightness(200%);
   position: absolute;
   height: 455px;
-  width: 100%;
+  width: 150%;
   bottom: 0%;
   left: 0%;
   z-index: 1;
@@ -274,82 +267,4 @@ a img.img
   background: #26cf42;
   color: white;
   z-index: 4;
-}
-
-
-
-@keyframes example {
-0% {
-    transform: rotateY(0deg) scale(1, 1);
-    text-shadow:    1px 0 #ccc,
-                    2px 0 #ccc,
-                    3px 0 #ccc,
-                    4px 0 #c9c9c9,
-                    5px 0 #c9c9c9,
-                    6px 0 #c9c9c9,
-                    7px 0 #bbb,
-                    8px 0 #bbb,
-                    9px 0 #bbb,
-                    10px 0 #b9b9b9,
-                   11px 0 #b9b9b9,
-                    12px 0 #b9b9b9,
-
-
-                   0 6px 1px rgba(0,0,0,.1),
-                   0 0 5px rgba(0,0,0,.1),
-                   0 1px 3px rgba(0,0,0,.3),
-                   0 3px 5px rgba(0,0,0,.2),
-                   0 5px 10px rgba(0,0,0,.25),
-                   0 10px 10px rgba(0,0,0,.2),
-                   0 20px 20px rgba(0,0,0,.15);
-   }
-   /* 50% {
-       transform: rotateY(45deg) scale(1.5)
-      } */
-    100% {
-          transform: rotateY(45deg) scale(1.5, 1);
-          text-shadow:    -1px 0 #ccc,
-                          -2px 0 #ccc,
-                          -3px 0 #ccc,
-                          -4px 0 #c9c9c9,
-                          -5px 0 #c9c9c9,
-                          -6px 0 #c9c9c9,
-                          -7px 0 #bbb,
-                          -8px 0 #bbb,
-                          -9px 0 #bbb,
-                          -10px 0 #b9b9b9,
-                          -11px 0 #b9b9b9,
-                          -12px 0 #b9b9b9,
-
-
-                         0 6px 1px rgba(0,0,0,.1),
-                         0 0 5px rgba(0,0,0,.1),
-                         0 1px 3px rgba(0,0,0,.3),
-                         0 3px 5px rgba(0,0,0,.2),
-                         0 5px 10px rgba(0,0,0,.25),
-                         0 10px 10px rgba(0,0,0,.2),
-                         0 20px 20px rgba(0,0,0,.15);
-         }
-}
-
-body
-{
-  background-color: black;
-}
-.gridt
-{
-  margin-top: 60px;
-  /* height: 50px; */
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  /* margin-left: -170px; */
-
-}
-.logo
-{
-  text-align: center;
-  height: 200px;
-  grid-column: 2/3;
-
 }
