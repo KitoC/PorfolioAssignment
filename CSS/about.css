@@ -11,6 +11,11 @@ body
   font-family: "Helvetica";
   color: black;
 }
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
 
 .topbox
 {
@@ -23,6 +28,7 @@ body
   display: grid;
   grid-template-rows: 1rem 2rem;
   margin-bottom: 0vw;
+  opacity: 0.97;
 }
 .headGrid
 {
@@ -123,7 +129,7 @@ div.time
   color: #e4af0a;
   height: 3rem;
   border-bottom: 0.5px solid lightgrey;
-  opacity: 0.9;
+  opacity: 0.99;
 }
 .icon-tb
 {
@@ -150,8 +156,12 @@ div.time
 
 main p
 {
+  padding: 0 0.4em;
   margin: 0.5rem;
   margin-top: 5rem;
+  margin-bottom: 2.5rem;
+  text-align: left;
+  font-size: 0.9em;
 }
 .phone
 {
