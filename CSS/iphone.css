@@ -7,10 +7,10 @@ body
 }
 
 /* This is to hide the scroll bar */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
-}
+} */
 
 /* This is to ensure the buttons on the iframe are clickable */
 iframe
